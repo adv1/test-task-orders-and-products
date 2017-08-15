@@ -1,0 +1,42 @@
+.container-fluid {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  justify-content: space-between;
+  font-family: "Noto Sans";
+  .top-menu {
+    display: flex;
+    .logo {
+      display: flex;
+      align-self: center;
+      margin: 0px 60px 0px 150px;
+    }
+    .search {
+      align-self: center;
+      color: black;
+      input {
+        border-radius: 5px;
+        width: 350px;
+        height: 25px;
+        background-color: #F0F3F5;
+        line-height: 30px;
+        outline: none;
+        margin: 5px 0px 5px 10px;
+      }
+      input::placeholder {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+  .time-now {
+    float: right;
+    align-self: center;
+    #day::first-letter {
+      margin-bottom: 5px;
+      text-transform: uppercase
+    }
+  }
+}
+
+

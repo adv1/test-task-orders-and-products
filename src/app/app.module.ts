@@ -1,16 +1,26 @@
+'use strict';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { NavigationMenuModule } from './navigation-menu/navigation-menu.module';
 
 import { AppComponent } from './app.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopMenuComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    NavigationMenuModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

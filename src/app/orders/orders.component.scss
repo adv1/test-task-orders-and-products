@@ -1,0 +1,174 @@
+.container-fluid {
+  .head {
+    display: flex;
+    align-content: center;
+    margin-bottom: 30px;
+    h3 {
+      align-self: center;
+      width: auto;
+      font-weight: 600;
+    }
+    button {
+      height: 30px;
+      width: 30px;
+      border-radius: 45px;
+      border-color: #87BD4A;
+      background-color: #8BC34A;
+      color: white;
+      align-self: center;
+      margin-right: 25px;
+      outline: none;
+    }
+  }
+  .orders-block {
+    min-height: 500px;
+    display: flex;
+    justify-content: space-between;
+
+    .orders {
+      width: 100%;
+    }
+    .current-order {
+      width: 100%;
+      min-width: 600px;
+      margin-left: 30px;
+      background-color: white;
+    }
+  }
+
+  .list-orders {
+    display: flex;
+    border: 1px solid lightgray;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    div {
+      width: auto;
+      margin: 0px 20px 0px 0px;
+      align-self: center;
+    }
+    .order-title {
+      margin-left: 20px;
+      text-decoration: underline;
+      text-decoration-color: lightgray;
+    }
+    .order-number-of-products {
+      display: flex;
+      align-content: space-around;
+      margin-left: 10px;
+      md-icon {
+        width: 30px;
+        height: 30px;
+        border: 1px solid gray;
+        border-radius: 55px;
+        align-self: center;
+        margin-right: 10px;
+        color: darkslategray;
+        text-align: center;
+        line-height: 30px;
+      }
+      #number-products {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    #shot-date{
+      text-align: center;
+      color: gray;
+    }
+    .usd {
+      color: gray;
+    }
+    .delete-icon {
+      align-self: center;
+      margin-right: 5px;
+    }
+    .arrow-block {
+      width: 35px;
+      height: 100%;
+      margin: 0px -1px 0px 0px;
+      background-color: #CFD8DC;
+      border-radius: 3px;
+      text-align: center;
+      color: white;
+      font-weight: 900;
+      line-height: 30px;
+    }
+  }
+
+  .current-order-list {
+    display: flex;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: space-between;
+    div {
+      width: auto;
+      margin: 0px 15px 0px 0px;
+      align-self: center;
+    }
+    .current-order-status-dot {
+      margin-left: 30px;
+    }
+    .current-order-product-title {
+      text-decoration: underline;
+      text-decoration-color: lightgray;
+    }
+    #current-serial-number {
+      color: gray;
+    }
+    md-icon {
+      color: gray;
+      align-self: center;
+      margin-right: 15px;
+    }
+  }
+  .current-order-list:hover {
+    border: 2px solid lightgray;
+  }
+
+  .close-button {
+    p {
+      height: 30px;
+      width: 30px;
+      border-radius: 30px;
+      background-color: white;
+      color: darkgray;
+      text-align: center;
+      line-height: 30px;
+      margin: -10px -10px 0px 0px;
+      float: right;
+      box-shadow: 2px 2px 2px 2px lightgray;
+    }
+
+  }
+
+  .current-order-title {
+    font-weight: 600;
+    margin: 10px 0px 10px 30px;
+  }
+  .current-order-button {
+    display: flex;
+    align-content: center;
+    margin: 0px 0px 10px 30px;
+    p {
+      align-self: center;
+      font-weight: 600;
+    }
+    h3 {
+      height: 25px;
+      width: 25px;
+      border-radius: 30px;
+      border-color: #8BC34A;
+      background-color: #8BC34A;
+      color: white;
+      align-self: center;
+      text-align: center;
+      margin-right: 25px;
+      outline: none;
+      line-height: 25px;
+    }
+    color: #8BC34A;
+  }
+}

@@ -1,0 +1,55 @@
+.container-fluid {
+  display: flex;
+  width: 100%;
+  font-family: "Noto Sans";
+}
+.nav-menu {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid lightgray;
+  box-shadow:  inset 0px 7px 10px whitesmoke;
+
+  .logoUser {
+    padding: 20px;
+  }
+  div {
+    padding: 5px 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    a {
+      padding: 5px 5px;
+      text-decoration: none;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    a:visited, a:link {
+      outline: none;
+      color: black;
+    }
+    a:hover {
+      outline: none;
+      border-bottom: 2px solid #8BC34A;
+    }
+    a.active {
+      outline: none;
+      border-bottom: 2px solid #8BC34A;
+    }
+  }
+}
+
+.router-block {
+  background-color: #F0F3F5;
+  width: 100%;
+  min-height: 650px;
+  box-shadow:  inset 6px 6px 10px #D7DDE0;
+  .router-out {
+    float: left;
+    padding: 30px;
+    margin: 30px 30px 30px 30px;
+  }
+}
+

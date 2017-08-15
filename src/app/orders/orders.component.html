@@ -1,0 +1,85 @@
+<div class="container-fluid">
+  <div class="head">
+    <button>+</button>
+    <h3>Приходы / {{ orders.length }}</h3>
+  </div>
+
+  <div class="orders-block">
+    <div class="orders">
+      <div class="list-orders" *ngFor="let order of orders"
+           (click)="orderOpen(order)"
+           [class.selected]="orderSelected(order)">
+
+        <div class="order-title" *ngIf="showElem">
+           {{ order.title }}
+        </div>
+
+        <div class="order-number-of-products">
+          <md-icon>menu</md-icon>
+          <div id="number-products">
+            {{ order.products.length }}
+            Продукта
+          </div>
+
+        </div>
+
+        <div class="order-date">
+          <div id="shot-date">{{ dateformat(order.date)
+            .toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit' })
+            .split(' ').join(' / ') }}
+          </div>
+          <div id="long-date">{{ dateformat(order.date)
+            .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric'})
+            .split(' ').join(' / ') }}
+          </div>
+        </div>
+
+        <div class="order-price" *ngIf="showElem">
+          <div class="usd">{{ sumPrices(order.products).sumPricesUsd }} $</div>
+          <div class="uah">{{ sumPrices(order.products).sumPricesUah }} {{ sumPrices(order.products).symbolUah }}</div>
+        </div>
+
+        <div class="delete-icon" (click)="modalOpen()">
+          <ngbd-modal-component *ngIf="showModal"></ngbd-modal-component>
+        </div>
+
+        <div class="arrow-block" *ngIf="!showElem"> <h3> > </h3> </div>
+      </div>
+
+    </div>
+
+    <div class="current-order" *ngIf="currentOrder">
+      <div class="close-button">
+        <p (click)="cancel()">x</p>
+      </div>
+      <div class="current-order-title">
+        <h3>{{ currentOrder.title }} </h3>
+      </div>
+      <div class="current-order-button">
+        <h3>+</h3>
+        <p>Добавить продукт</p>
+      </div>
+      <div class="current-order-list" *ngFor="let order of currentOrder.products">
+        <div class="current-order-status-dot">
+          <h1>.</h1>
+        </div>
+        <div class="current-order-photo">
+          <img src="./assets/images/monitor.jpg"/>
+        </div>
+        <div class="current-order-product-title">
+          <div id="current-title">Длинное название продукта {{ order.title }} </div>
+          <div id="current-serial-number">{{ order.serialNumber }} </div>
+        </div>
+        <div class="current-order-status">
+          <p>В ремонте</p>
+        </div>
+
+        <md-icon>delete</md-icon>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+
+  <div class="head">
+    <h3>Продукты / {{ products.length }} </h3>
+    <div class="select" *ngFor="let product of products.slice(0,1)">
+        <p>Тип:
+          <select>
+            <option (click)="selectFilter()">{{ product.type }}</option>
+        </select>
+        </p>
+        <p>Cпецификация:
+          <select>
+            <option>{{ product.specification }}</option>
+          </select>
+        </p>
+    </div>
+  </div>
+
+
+  <div class="products" *ngFor="let product of products">
+
+    <div class="product-status-dot">
+      <h1>.</h1>
+    </div>
+
+    <div class="product-photo">
+      <img src="./assets/images/monitor.jpg"/>
+    </div>
+
+    <div class="product-title">
+      <div id="title">{{ product.title }} </div>
+      <div id="serialNumber">{{ product.serialNumber }} </div>
+    </div>
+
+    <div class="product-status">
+      <p>В ремонте</p>
+    </div>
+
+    <div class="product-type">
+      {{ product.type }}
+    </div>
+
+    <div class="product-guarantee">
+      <div class="guarantee-start">
+        с {{ dateformat(product.guarantee.start)
+        .toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })
+        .split(' ').join(' / ') }}
+      </div>
+      <div class="guarantee-end">
+        по {{ dateformat(product.guarantee.end)
+        .toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })
+        .split(' ').join(' / ') }}
+      </div>
+    </div>
+
+    <div class="product-price">
+      <div class="usd">{{ product.price[0].value }} $</div>
+      <div class="uah">{{ product.price[1].value }} {{ product.price[1].symbol }}</div>
+    </div>
+
+    <div class="product-order">
+      Название прихода {{ product.order }}
+    </div>
+
+    <div class="product-date">
+      <div id="short-date">
+        {{ dateformat(product.date)
+        .toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit' })
+        .split(' ').join(' / ') }}
+      </div>
+      <div id="long-date">
+        {{ dateformat(product.date)
+        .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric'})
+        .split(' ').join(' / ') }}</div>
+    </div>
+
+    <md-icon>delete</md-icon>
+
+  </div>
+</div>
+
