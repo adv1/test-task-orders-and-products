@@ -1,0 +1,41 @@
+.modal-header {
+  .modal-title {
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.modal-body {
+  .options-content{
+    display: flex;
+    justify-content: space-around;
+    h1 {
+      text-align: start;
+      color: #8BC34A;
+    }
+    #title-current-order {
+      display: flex;
+      flex-direction: column;
+      #current-serial-number {
+        color: lightslategray;
+      }
+    }
+  }
+
+}
+
+.modal-footer {
+  background-color: #8BC34A;
+  text-decoration-color: white;
+  button {
+    background-color: #8BC34A;
+    border-color: #8BC34A;
+    font-weight: 600;
+    color: white;
+  }
+  button:hover {
+    background-color: white;
+    color: red;
+    border-radius: 50px;
+  }
+}
